@@ -98,6 +98,16 @@ function updateCartDisplay() {
     li.appendChild(removeButton);
     cartItemsList.appendChild(li);
   });
+
+  // Calculate and display cart total
+  const cartTotal = calculateCartTotal();
+  const totalDisplay = document.getElementById("cart-total");
+  totalDisplay.textContent = `Total: $${(cartTotal / 100).toFixed(2)}`;
+}
+
+// Calculate the total price of the items in the cart
+function calculateCartTotal() {
+  return cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
 }
 
 // Update product quantity in cart
