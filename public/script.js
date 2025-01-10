@@ -26,25 +26,32 @@ products.forEach(product => {
   productInfo.textContent = `${product.name} - $${(product.price / 100).toFixed(2)}`;
   li.appendChild(productInfo);
 
-  // Add "Add to Cart" button for each product
+  // Add input for quantity and "Add to Cart" button for each product
+  const quantityInput = document.createElement("input");
+  quantityInput.type = "number";
+  quantityInput.value = 1;
+  quantityInput.min = 1; // Ensure the minimum value is 1
+  quantityInput.style.marginLeft = "10px"; // Space between the price and the input field
+  li.appendChild(quantityInput);
+
   const addButton = document.createElement("button");
   addButton.textContent = "Add to Cart";
-  addButton.addEventListener("click", () => addToCart(product));
+  addButton.addEventListener("click", () => addToCart(product, quantityInput.value));
 
   li.appendChild(addButton);
   productList.appendChild(li);
 });
 
 // Add product to cart
-function addToCart(product) {
+function addToCart(product, quantity) {
   const existingProductIndex = cartItems.findIndex(item => item.id === product.id);
 
   if (existingProductIndex !== -1) {
     // Update quantity if the product is already in the cart
-    cartItems[existingProductIndex].quantity += 1;
+    cartItems[existingProductIndex].quantity += parseInt(quantity);
   } else {
     // Add new product to the cart
-    cartItems.push({ ...product, quantity: 1 });
+    cartItems.push({ ...product, quantity: parseInt(quantity) });
   }
 
   updateCartDisplay();
@@ -60,6 +67,16 @@ function updateCartDisplay() {
     const li = document.createElement("li");
     li.textContent = `${item.name} - $${(item.price / 100).toFixed(2)} x ${item.quantity}`;
 
+    // Create input field to change quantity
+    const quantityInput = document.createElement("input");
+    quantityInput.type = "number";
+    quantityInput.value = item.quantity;
+    quantityInput.min = 1;
+    quantityInput.style.marginLeft = "10px"; // Space between text and the input field
+    quantityInput.addEventListener("change", (event) => updateQuantity(item.id, event.target.value));
+
+    li.appendChild(quantityInput);
+
     // Create a "Remove from Cart" button
     const removeButton = document.createElement("button");
     removeButton.textContent = "Remove";
@@ -68,6 +85,16 @@ function updateCartDisplay() {
     li.appendChild(removeButton);
     cartItemsList.appendChild(li);
   });
+}
+
+// Update product quantity in cart
+function updateQuantity(productId, newQuantity) {
+  const productIndex = cartItems.findIndex(item => item.id === productId);
+  if (productIndex !== -1) {
+    cartItems[productIndex].quantity = parseInt(newQuantity);
+    updateCartDisplay();
+    saveCartToLocalStorage();
+  }
 }
 
 // Remove product from cart
