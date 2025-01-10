@@ -59,10 +59,11 @@ summary{
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.185);
     border: 1px solid yellowgreen;
-    box-shadow: 0px 2px 6px rgba(135, 206, 250, 0.445);
+    box-shadow: 0px 2px 6px rgba(135, 206, 250, 0.973);
     color: yellow;
     text-shadow: 2px 2px 4px darkblue;
     opacity: 70%;
+    z-index: 9999;
 }
 summary i{
     cursor: pointer;
@@ -316,7 +317,7 @@ summary:hover{
         border: 2px solid rgba(255, 217, 0, 0.863);
         box-shadow: 0px 3px 10px black;
         border-radius: 10px;
-        background-image:url();
+        background-image:url(AccesoriesPic.png);
         background-position: center;
         background-size: cover;
         cursor: pointer;
