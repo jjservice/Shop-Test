@@ -1,28 +1,24 @@
-<!-- public/index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping Cart</title>
-  <script src="https://js.stripe.com/v3/"></script> <!-- Stripe.js -->
+  <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
-  <h1>Your Shopping Cart</h1>
+  <h1>Product List</h1>
+  <ul id="product-list"></ul>
 
-  <!-- Cart Items -->
-  <ul id="cart-items">
-    <!-- Cart items will be listed here -->
-  </ul>
+  <h2>Your Cart</h2>
+  <ul id="cart-items"></ul>
 
-  <div id="card-element">
-    <!-- A Stripe Element will be inserted here. -->
-  </div>
-  
+  <!-- Stripe Elements to collect card details -->
+  <div id="card-element"></div>
 
   <button id="pay-button">Pay Now</button>
 
-  <script src="script.js"></script> <!-- Link to script.js -->
+  <script src="script.js"></script>
 </body>
 </html>
+
