@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LOLLIPOP</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
@@ -13,7 +14,10 @@
   <h1>LOLLIPOP STORE</h1>
 
   <details>
-    <summary  style="list-style-type: none;"><h2>Your Cart</h2></summary>
+     
+    <summary><i class="fa fa-shopping-cart"></i></summary>
+    <div class="cart-container">
+    
   
     <ul id="cart-items"></ul>
 
@@ -23,7 +27,7 @@
   <div id="cart-total"></div>
 
   <button id="pay-button">Pay Now</button>
-
+   </div>
  </details>
  
   <ul id="product-list"></ul>
