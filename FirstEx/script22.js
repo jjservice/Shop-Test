@@ -1,5 +1,3 @@
-  // public/script.js
-
 // Sample cart items (You can dynamically populate this from your database or frontend)
 const cartItems = [
     { id: 1, name: "Product 1", price: 1000, quantity: 2 }, // Price in cents, $10.00

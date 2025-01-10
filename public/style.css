@@ -12,18 +12,38 @@ body {
     background: linear-gradient(to right, black,darkblue,maroon,black);
 }
 
-h1 {
-    margin: 0% auto;
-    background-color: rgba(0, 0, 0, 0.322);
-    padding: 5px;
-    border-radius: 100%;
-    border: 6px solid rgba(245, 245, 245, 0.151);
-    font-size: 35px;
-    text-align: center;
-    margin-bottom: 15px;
-    color: white;
-    text-shadow: 2px 2px 4px gold;
-    box-shadow: 0px 2px 8px black;
+h1{
+  margin: 0% auto;
+  width: 90%;
+  color: white;
+  text-shadow: 2px 2px 4px darkblue;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 2px;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 5px;
+  background-image: url(AstronautHeadLogoGif.gif);
+  background-position: center;
+  background-size: 40%;
+  opacity: 80%;
+  border-radius: 100%;
+  border: 6px solid rgba(15, 50, 209, 0.644);
+  box-shadow: 0px 2px 10px rgba(135, 206, 250, 0.445);
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: 1s;
+
+}
+h1 ion-icon{
+  border-bottom: 2px solid wheat;
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px darkgreen;
+  background-image: url(lollipop_3GIF.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 summary{
     margin: 0% auto;
@@ -566,6 +586,77 @@ summary:hover{
         height: 0px;
         width: 0px;
       }
+
+
+      
+.image-container {
+    margin: 0 auto;
+    margin-bottom: 5px;
+    align-items: center;
+    text-align: center;
+    width: 370px;
+    
+  }
+  .image-container img{
+    padding: 3px;
+    border-radius: 8px;
+    border: 1px solid lightskyblue;
+    box-shadow: 0px 2px 5px lightskyblue;
+    margin-inline: 2px;
+    cursor: pointer;
+  }
+  body.lightStore .image-container img{
+    border: 2px solid yellowgreen;
+    box-shadow: 0px 2px 5px rgba(255, 217, 0, 0.849);
+    transition: 1s;
+  }
+  .blink-image {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    opacity: 0; /* Initially hide the images */
+    animation: blink 10s infinite;
+  }
+  
+  .blink-image:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .blink-image:nth-child(2) {
+    animation-delay: 2s;
+  }
+  
+  .blink-image:nth-child(3) {
+    animation-delay: 4s;
+  }
+  
+  .blink-image:nth-child(4) {
+    animation-delay: 6s;
+  }
+  
+  .blink-image:nth-child(5) {
+    animation-delay: 8s;
+  }
+  .blink-image:nth-child(6) {
+    animation-delay: 10s;
+  }
+  
+  .blink-image:nth-child(7) {
+    animation-delay: 12s;
+  }
+  .blink-image:nth-child(8) {
+    animation-delay: 14s;
+  }
+  
+  @keyframes blink {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        opacity: 0;
+    }
+    10%, 30%, 50%, 70%, 90% {
+      opacity: 1;
+  }
+         
+    } 
       
       @media (min-width: 768px) {
         .nav-info{
@@ -688,25 +779,13 @@ summary:hover{
 }
 
 @media (min-width: 768px) {
-    .nav-info{
-        position: absolute;
-        left: 5px;
-        top: 155px;
-        gap: 10px;
-        opacity: 90%;
-        
-      }
-      .nav-info a{
-        margin: 5px;
-      }
-    .container{
-      margin: 0% auto;
-      display: block;
-      height: 350px;
-      margin-top: 30px;
-      margin-bottom: 50px;
-      min-width: 300px; 
-    }
+   
+   .nav-info{
+    margin: 0% auto;
+    position: relative;
+    top: 0%;
+    display: flex;
+   }
   .Box{
     margin: 0% auto;
     position: relative;

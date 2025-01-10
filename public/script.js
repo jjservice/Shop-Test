@@ -1,13 +1,13 @@
 // Sample product list with images
 const products = [
   { id: 1, name: "Product 1", price: 1000, image: "./items/NikeAirForce1'07-mainPic.png" }, 
-  { id: 2, name: "Product 2", price: 1500, image: "./items/NikeAirForce1'07-mainPic.png" }, 
+  { id: 2, name: "Product 2", price: 1500, image: "./razerpic00.jpg" }, 
   { id: 3, name: "Product 3", price: 2000, image: "./items/NikeAirForce1'07-mainPic.png" }, 
-  { id: 4, name: "Product 4", price: 2500, image: "./items/NikeAirForce1'07-mainPic.png" }, 
+  { id: 4, name: "Product 4", price: 2500, image: "./Razerpic5.webp" }, 
   { id: 1, name: "Product 1", price: 1000, image: "./items/NikeAirForce1'07-mainPic.png" }, 
-  { id: 2, name: "Product 2", price: 1500, image: "./items/NikeAirForce1'07-mainPic.png" }, 
+  { id: 2, name: "Product 2", price: 1500, image: "./razerpic00.jpg" }, 
   { id: 3, name: "Product 3", price: 2000, image: "./items/NikeAirForce1'07-mainPic.png" }, 
-  { id: 4, name: "Product 4", price: 2500, image: "./items/NikeAirForce1'07-mainPic.png" } 
+  { id: 4, name: "Product 4", price: 2500, image: "./Razerpic5.webp" } 
 ];
 
 // Initialize an empty cart (from localStorage if available)
