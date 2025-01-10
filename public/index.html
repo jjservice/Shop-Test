@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopping Cart</title>
+  <title>LOLLIPOP</title>
+  <link rel="stylesheet" href="style.css">
   <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
-  <h1>Product List</h1>
-  <ul id="product-list"></ul>
 
-  <h2>Your Cart</h2>
-  <ul id="cart-items"></ul>
+
+  <h1>LOLLIPOP STORE</h1>
+
+  <details>
+    <summary  style="list-style-type: none;"><h2>Your Cart</h2></summary>
+  
+    <ul id="cart-items"></ul>
 
   <!-- Stripe Elements to collect card details -->
   <div id="card-element"></div>
@@ -19,6 +23,13 @@
   <div id="cart-total"></div>
 
   <button id="pay-button">Pay Now</button>
+
+ </details>
+ 
+  <ul id="product-list"></ul>
+
+  
+ 
 
   <script src="script.js"></script>
 </body>
