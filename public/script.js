@@ -34,24 +34,37 @@ products.forEach(product => {
   quantityInput.style.marginLeft = "10px"; // Space between the price and the input field
   li.appendChild(quantityInput);
 
+  // Add size selection for the product
+  const sizeSelect = document.createElement("select");
+  const sizes = ["Small", "Medium", "Large"];
+  sizes.forEach(size => {
+    const option = document.createElement("option");
+    option.value = size;
+    option.textContent = size;
+    sizeSelect.appendChild(option);
+  });
+  sizeSelect.style.marginLeft = "10px"; // Space between quantity input and size dropdown
+  li.appendChild(sizeSelect);
+
+  // Add "Add to Cart" button
   const addButton = document.createElement("button");
   addButton.textContent = "Add to Cart";
-  addButton.addEventListener("click", () => addToCart(product, quantityInput.value));
+  addButton.addEventListener("click", () => addToCart(product, quantityInput.value, sizeSelect.value));
 
   li.appendChild(addButton);
   productList.appendChild(li);
 });
 
 // Add product to cart
-function addToCart(product, quantity) {
-  const existingProductIndex = cartItems.findIndex(item => item.id === product.id);
+function addToCart(product, quantity, size) {
+  const existingProductIndex = cartItems.findIndex(item => item.id === product.id && item.size === size);
 
   if (existingProductIndex !== -1) {
-    // Update quantity if the product is already in the cart
+    // Update quantity if the product with the selected size is already in the cart
     cartItems[existingProductIndex].quantity += parseInt(quantity);
   } else {
-    // Add new product to the cart
-    cartItems.push({ ...product, quantity: parseInt(quantity) });
+    // Add new product to the cart with size information
+    cartItems.push({ ...product, quantity: parseInt(quantity), size });
   }
 
   updateCartDisplay();
@@ -65,7 +78,7 @@ function updateCartDisplay() {
   
   cartItems.forEach(item => {
     const li = document.createElement("li");
-    li.textContent = `${item.name} - $${(item.price / 100).toFixed(2)} x ${item.quantity}`;
+    li.textContent = `${item.name} - Size: ${item.size} - $${(item.price / 100).toFixed(2)} x ${item.quantity}`;
 
     // Create input field to change quantity
     const quantityInput = document.createElement("input");
