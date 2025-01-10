@@ -1,5 +1,3 @@
-// public/script.js
-
 // Sample product list
 const products = [
   { id: 1, name: "Product 1", price: 1000 }, // Price in cents, $10.00
@@ -7,8 +5,8 @@ const products = [
   { id: 3, name: "Product 3", price: 2000 }, // Price in cents, $20.00
 ];
 
-// Initialize an empty cart
-let cartItems = [];
+// Initialize an empty cart (from localStorage if available)
+let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
 // Display the product list
 const productList = document.getElementById("product-list");
@@ -38,6 +36,7 @@ function addToCart(product) {
   }
 
   updateCartDisplay();
+  saveCartToLocalStorage();
 }
 
 // Update cart display
@@ -50,6 +49,11 @@ function updateCartDisplay() {
     li.textContent = `${item.name} - $${(item.price / 100).toFixed(2)} x ${item.quantity}`;
     cartItemsList.appendChild(li);
   });
+}
+
+// Save cart to local storage
+function saveCartToLocalStorage() {
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
 }
 
 // Initialize Stripe
@@ -96,6 +100,8 @@ const elements = stripe.elements();
 const cardElement = elements.create('card');
 cardElement.mount('#card-element'); // Mount it to the DOM (make sure to add an element for this in the HTML)
 
+// Initialize cart display on page load
+updateCartDisplay();
 
 
 
