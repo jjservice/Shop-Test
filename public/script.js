@@ -3,6 +3,11 @@ const products = [
   { id: 1, name: "Product 1", price: 1000, image: "./items/NikeAirForce1'07-mainPic.png" }, // Price in cents, $10.00
   { id: 2, name: "Product 2", price: 1500, image: "./items/NikeAirForce1'07-mainPic.png" }, // Price in cents, $15.00
   { id: 3, name: "Product 3", price: 2000, image: "./items/NikeAirForce1'07-mainPic.png" }, // Price in cents, $20.00
+  { id: 3, name: "Product 3", price: 2000, image: "./items/NikeAirForce1'07-mainPic.png" }, 
+  { id: 1, name: "Product 1", price: 1000, image: "./items/NikeAirForce1'07-mainPic.png" }, // Price in cents, $10.00
+  { id: 2, name: "Product 2", price: 1500, image: "./items/NikeAirForce1'07-mainPic.png" }, // Price in cents, $15.00
+  { id: 3, name: "Product 3", price: 2000, image: "./items/NikeAirForce1'07-mainPic.png" }, // Price in cents, $20.00
+  { id: 3, name: "Product 3", price: 2000, image: "./items/NikeAirForce1'07-mainPic.png" } // Price in cents, $20.00
 ];
 
 // Initialize an empty cart (from localStorage if available)
