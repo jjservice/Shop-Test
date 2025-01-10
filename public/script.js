@@ -1,8 +1,8 @@
 // Sample product list with images
 const products = [
-  { id: 1, name: "Product 1", price: 1000, image: "path/to/product1-image.jpg" }, // Price in cents, $10.00
-  { id: 2, name: "Product 2", price: 1500, image: "path/to/product2-image.jpg" }, // Price in cents, $15.00
-  { id: 3, name: "Product 3", price: 2000, image: "path/to/product3-image.jpg" }, // Price in cents, $20.00
+  { id: 1, name: "Product 1", price: 1000, image: "./items/NikeAirForce1'07-mainPic.png" }, // Price in cents, $10.00
+  { id: 2, name: "Product 2", price: 1500, image: "./items/NikeAirForce1'07-mainPic.png" }, // Price in cents, $15.00
+  { id: 3, name: "Product 3", price: 2000, image: "./items/NikeAirForce1'07-mainPic.png" }, // Price in cents, $20.00
 ];
 
 // Initialize an empty cart (from localStorage if available)
@@ -164,6 +164,10 @@ document.getElementById("pay-button").addEventListener("click", async () => {
     if (error) {
       alert(`Payment failed: ${error.message}`);
     } else if (paymentIntent.status === 'succeeded') {
+      // Clear the cart after successful payment
+      cartItems = []; // Empty the cart array
+      localStorage.removeItem('cartItems'); // Remove the cart data from localStorage
+      updateCartDisplay(); // Update the cart display to reflect the changes
       alert(`Payment successful! Amount paid: $${(amount / 100).toFixed(2)}`);
     }
   } catch (error) {
