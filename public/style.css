@@ -55,6 +55,9 @@ details{
   align-items: center;
   padding: 10px;
 }
+#cart-items{
+  list-style-type: none;
+}
 #cart-items input{
   margin: 0% auto;
   width: 50%;
@@ -62,6 +65,7 @@ details{
   padding: 5px 10px;
   border: 2px solid darkgray;
   border-radius: 5px;
+  border: 1px solid lightskyblue;
   transition: 0.5s;
   box-shadow: 0px 2px 10px rgba(135, 206, 250, 0.445);
   outline: none;
@@ -69,13 +73,14 @@ details{
 }
 #cart-items button{
   margin: 10px 0%;
-  width: 100px;
+  width: 60px;
+  font-size: 10px;
   padding: 5px 10px;
   border: 2px solid darkgray;
   border-radius: 5px;
   transition: 0.5s;
   box-shadow: 0px 2px 10px rgba(135, 206, 250, 0.445);
-  background-color: darkgreen;
+  background-color: red;
   color: white;
   text-shadow: 2px 2px 4px darkblue;
   cursor: pointer;
@@ -245,6 +250,7 @@ summary:hover{
     margin-top: 20px;
     color: black;
     display: inline;
+    list-style-type: none;
     overflow-y: auto;
 }
 
