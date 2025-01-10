@@ -110,10 +110,9 @@ summary:hover{
 }
 #product-list{
     margin: 0% auto;
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 10px;
     padding: 10px;
     justify-items: center;
     align-items: center;
@@ -124,10 +123,9 @@ summary:hover{
 #product-list li{
     margin: 0% auto;
     list-style-type: none;
-    display: grid;
+    display: inline;
     justify-content: center;
     align-items: center;
-    position: relative;
     text-align: center;
     padding: 10px;
     background-color: rgba(245, 245, 245, 0.178);
@@ -135,22 +133,54 @@ summary:hover{
     border-radius: 10px;
     box-shadow: 0px 2px 8px black;
     margin-bottom: 20px;
-    height: 250px;
+    width: 80%;
+    height: 300px;
     color: white;
     text-shadow: 2px 2px 4px black;
 }
 #product-list img{
     margin: 0% auto;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     margin-bottom: 10px;
     border-radius: 10px;
     box-shadow: 0px 2px 6px black;
 }
+#product-list span{
+  margin: 0% auto;
+  font-size: 18px;
+  color: yellow;
+  text-shadow: 2px 2px 4px darkblue;
+  text-shadow: 2px 2px 4px black;
+  margin-bottom: 20px;
+}
+
+#product-list input{
+  margin: 0% auto;
+  width: 80px;
+  padding: 2px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgb(235, 235, 235);
+  color: black;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+#product-list select{
+  margin: 0% auto;
+  width: 80px;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: rgb(235, 235, 235);
+  color: black;
+  cursor: pointer;
+  margin-bottom: 20px;
+
+}
 #product-list button{
     margin: 0% auto;
     border: none;
-    padding: 5px 10px;
+    padding: 10px 10px;
     border-radius: 10px;
     background-color: blue;
     color: white;
@@ -160,15 +190,7 @@ summary:hover{
     transform: scale(1.10);
     transition: 1s;
 }
-#product-list select{
-    width: 100px;
-    padding: 5px 0px;
-    border-radius: 10px;
-    background-color: rgb(235, 235, 235);
-    color: black;
-    cursor: pointer;
 
-}
 
 .cart-container{
     position: fixed;
@@ -747,7 +769,7 @@ summary:hover{
         width: 600px;
     }
     #card-element{
-        width: 400px;
+        width: 70%;
     }
     #product-list{
         grid-template-columns: repeat(4, 1fr);
