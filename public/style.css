@@ -8,6 +8,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     justify-content: center;
     text-align: center;
+    flex-direction: column;
     padding: 10px;
     background: linear-gradient(to right, black,darkblue,maroon,black);
 }
@@ -45,6 +46,41 @@ h1 ion-icon{
   background-repeat: no-repeat;
   background-size: cover;
 }
+details{
+  margin: 0% auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+#cart-items input{
+  margin: 0% auto;
+  width: 50%;
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: 2px solid darkgray;
+  border-radius: 5px;
+  transition: 0.5s;
+  box-shadow: 0px 2px 10px rgba(135, 206, 250, 0.445);
+  outline: none;
+
+}
+#cart-items button{
+  margin: 10px 0%;
+  width: 100px;
+  padding: 5px 10px;
+  border: 2px solid darkgray;
+  border-radius: 5px;
+  transition: 0.5s;
+  box-shadow: 0px 2px 10px rgba(135, 206, 250, 0.445);
+  background-color: darkgreen;
+  color: white;
+  text-shadow: 2px 2px 4px darkblue;
+  cursor: pointer;
+}
+
 summary{
     margin: 0% auto;
     width: 75px;
@@ -80,7 +116,6 @@ summary:hover{
 #card-element{
     margin: 0% auto;
     width: 80%;
-    position: relative;
     border: 2px solid darkgray;
     padding: 10px;
     border-radius: 10px;
