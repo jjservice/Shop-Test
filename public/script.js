@@ -1,13 +1,13 @@
 // Sample product list with images
 const products = [
-  { id: 1, name: "Product 1", price: 1000, image: "./items/NikeAirForce1'07-mainPic.png" }, // Price in cents, $10.00
-  { id: 2, name: "Product 2", price: 1500, image: "./items/NikeAirForce1'07-mainPic.png" }, // Price in cents, $15.00
-  { id: 3, name: "Product 3", price: 2000, image: "./items/NikeAirForce1'07-mainPic.png" }, // Price in cents, $20.00
+  { id: 1, name: "Product 1", price: 1000, image: "./items/NikeAirForce1'07-mainPic.png" }, 
+  { id: 2, name: "Product 2", price: 1500, image: "./items/NikeAirForce1'07-mainPic.png" }, 
   { id: 3, name: "Product 3", price: 2000, image: "./items/NikeAirForce1'07-mainPic.png" }, 
-  { id: 1, name: "Product 1", price: 1000, image: "./items/NikeAirForce1'07-mainPic.png" }, // Price in cents, $10.00
-  { id: 2, name: "Product 2", price: 1500, image: "./items/NikeAirForce1'07-mainPic.png" }, // Price in cents, $15.00
-  { id: 3, name: "Product 3", price: 2000, image: "./items/NikeAirForce1'07-mainPic.png" }, // Price in cents, $20.00
-  { id: 3, name: "Product 3", price: 2000, image: "./items/NikeAirForce1'07-mainPic.png" } // Price in cents, $20.00
+  { id: 4, name: "Product 4", price: 2500, image: "./items/NikeAirForce1'07-mainPic.png" }, 
+  { id: 1, name: "Product 1", price: 1000, image: "./items/NikeAirForce1'07-mainPic.png" }, 
+  { id: 2, name: "Product 2", price: 1500, image: "./items/NikeAirForce1'07-mainPic.png" }, 
+  { id: 3, name: "Product 3", price: 2000, image: "./items/NikeAirForce1'07-mainPic.png" }, 
+  { id: 4, name: "Product 4", price: 2500, image: "./items/NikeAirForce1'07-mainPic.png" } 
 ];
 
 // Initialize an empty cart (from localStorage if available)
@@ -20,10 +20,14 @@ products.forEach(product => {
 
   // Create and append the product image
   const img = document.createElement("img");
-  img.src = product.image; // Image source path
-  img.alt = product.name; // Alt text for the image
-  img.style.width = "100px"; // Set a fixed width (you can adjust it)
-  img.style.height = "100px"; // Set a fixed height (you can adjust it)
+  img.src = product.image; 
+  img.alt = product.name; 
+  img.style.width = "100px"; 
+  img.style.height = "100px"; 
+
+  // Open the modal when image is clicked
+  img.addEventListener("click", () => openModal(product.image));
+
   li.appendChild(img);
 
   // Display product name and price
@@ -35,8 +39,8 @@ products.forEach(product => {
   const quantityInput = document.createElement("input");
   quantityInput.type = "number";
   quantityInput.value = 1;
-  quantityInput.min = 1; // Ensure the minimum value is 1
-  quantityInput.style.marginLeft = "10px"; // Space between the price and the input field
+  quantityInput.min = 1; 
+  quantityInput.style.marginLeft = "10px"; 
   li.appendChild(quantityInput);
 
   // Add size selection for the product
@@ -48,7 +52,7 @@ products.forEach(product => {
     option.textContent = size;
     sizeSelect.appendChild(option);
   });
-  sizeSelect.style.marginLeft = "10px"; // Space between quantity input and size dropdown
+  sizeSelect.style.marginLeft = "10px"; 
   li.appendChild(sizeSelect);
 
   // Add "Add to Cart" button
@@ -65,16 +69,42 @@ function addToCart(product, quantity, size) {
   const existingProductIndex = cartItems.findIndex(item => item.id === product.id && item.size === size);
 
   if (existingProductIndex !== -1) {
-    // Update quantity if the product with the selected size is already in the cart
     cartItems[existingProductIndex].quantity += parseInt(quantity);
   } else {
-    // Add new product to the cart with size information
     cartItems.push({ ...product, quantity: parseInt(quantity), size });
   }
 
   updateCartDisplay();
   saveCartToLocalStorage();
 }
+
+// Open the modal with the product image
+function openModal(imageSrc) {
+  const modal = document.getElementById("modal");
+  const modalImage = document.getElementById("modal-image");
+
+  // Set the source of the image in the modal
+  modalImage.src = imageSrc;
+
+  // Display the modal
+  modal.style.display = "block";
+}
+
+// Close the modal when the user clicks the close button
+const closeModalButton = document.querySelector(".close-btn");
+closeModalButton.addEventListener("click", () => {
+  const modal = document.getElementById("modal");
+  modal.style.display = "none";
+});
+
+// Close the modal if the user clicks outside of the modal content
+window.addEventListener("click", (event) => {
+  const modal = document.getElementById("modal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
 
 // Update cart display
 function updateCartDisplay() {
