@@ -88,11 +88,12 @@ details{
 
 summary{
     margin: 0% auto;
-    width: 75px;
+    width: 50px;
     height: auto;
     position: fixed;
-    top: 75px;
-    left: 15px;
+    display: flex;
+    top: 95px;
+    left: 10px;
     font-size: 25px;
     list-style-type: none;
     cursor: pointer;
@@ -855,7 +856,8 @@ summary:hover{
     summary{
       width: 100px;
       position: fixed;
-      top: 5%;
+      display: inline;
+      top: 10%;
       
     }
    

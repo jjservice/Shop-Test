@@ -45,7 +45,7 @@ products.forEach(product => {
 
   // Add size selection for the product
   const sizeSelect = document.createElement("select");
-  const sizes = ["Small", "Medium", "Large"];
+  const sizes = ["Small", "Medium", "Large",];
   sizes.forEach(size => {
     const option = document.createElement("option");
     option.value = size;
