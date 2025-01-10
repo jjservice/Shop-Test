@@ -1,8 +1,8 @@
-// Sample product list
+// Sample product list with images
 const products = [
-  { id: 1, name: "Product 1", price: 1000 }, // Price in cents, $10.00
-  { id: 2, name: "Product 2", price: 1500 }, // Price in cents, $15.00
-  { id: 3, name: "Product 3", price: 2000 }, // Price in cents, $20.00
+  { id: 1, name: "Product 1", price: 1000, image: "path/to/product1-image.jpg" }, // Price in cents, $10.00
+  { id: 2, name: "Product 2", price: 1500, image: "path/to/product2-image.jpg" }, // Price in cents, $15.00
+  { id: 3, name: "Product 3", price: 2000, image: "path/to/product3-image.jpg" }, // Price in cents, $20.00
 ];
 
 // Initialize an empty cart (from localStorage if available)
@@ -12,8 +12,20 @@ let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 const productList = document.getElementById("product-list");
 products.forEach(product => {
   const li = document.createElement("li");
-  li.textContent = `${product.name} - $${(product.price / 100).toFixed(2)}`;
-  
+
+  // Create and append the product image
+  const img = document.createElement("img");
+  img.src = product.image; // Image source path
+  img.alt = product.name; // Alt text for the image
+  img.style.width = "100px"; // Set a fixed width (you can adjust it)
+  img.style.height = "100px"; // Set a fixed height (you can adjust it)
+  li.appendChild(img);
+
+  // Display product name and price
+  const productInfo = document.createElement("span");
+  productInfo.textContent = `${product.name} - $${(product.price / 100).toFixed(2)}`;
+  li.appendChild(productInfo);
+
   // Add "Add to Cart" button for each product
   const addButton = document.createElement("button");
   addButton.textContent = "Add to Cart";
@@ -47,8 +59,24 @@ function updateCartDisplay() {
   cartItems.forEach(item => {
     const li = document.createElement("li");
     li.textContent = `${item.name} - $${(item.price / 100).toFixed(2)} x ${item.quantity}`;
+
+    // Create a "Remove from Cart" button
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+    removeButton.addEventListener("click", () => removeFromCart(item.id));
+
+    li.appendChild(removeButton);
     cartItemsList.appendChild(li);
   });
+}
+
+// Remove product from cart
+function removeFromCart(productId) {
+  // Remove the product from the cart array
+  cartItems = cartItems.filter(item => item.id !== productId);
+
+  updateCartDisplay();
+  saveCartToLocalStorage();
 }
 
 // Save cart to local storage
@@ -102,22 +130,3 @@ cardElement.mount('#card-element'); // Mount it to the DOM (make sure to add an 
 
 // Initialize cart display on page load
 updateCartDisplay();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
