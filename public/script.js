@@ -65,6 +65,7 @@ products.forEach(product => {
 });
 
 // Add product to cart
+// Add product to cart
 function addToCart(product, quantity, size) {
   const existingProductIndex = cartItems.findIndex(item => item.id === product.id && item.size === size);
 
@@ -76,7 +77,38 @@ function addToCart(product, quantity, size) {
 
   updateCartDisplay();
   saveCartToLocalStorage();
+
+  // Notify the user that the item has been added to the cart
+  notifyUser(`${product.name} (Size: ${size}) has been added to your cart.`);
 }
+
+// Function to display a notification message
+function notifyUser(message) {
+  // Create a notification element
+  const notification = document.createElement('div');
+  notification.textContent = message;
+  notification.style.position = 'fixed';
+  notification.style.top = '10px';
+  notification.style.right = '10px';
+  notification.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+  notification.style.color = 'white';
+  notification.style.padding = '10px';
+  notification.style.borderRadius = '5px';
+  notification.style.fontSize = '14px';
+  notification.style.zIndex = '1000';
+
+  // Append notification to the body
+  document.body.appendChild(notification);
+
+  // Automatically hide the notification after 3 seconds
+  setTimeout(() => {
+    notification.remove();
+  }, 3000);
+
+}
+
+
+
 
 // Open the modal with the product image
 function openModal(imageSrc) {
