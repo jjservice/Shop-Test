@@ -162,21 +162,22 @@ summary:hover{
 #product-list li{
     margin: 0% auto;
     list-style-type: none;
+    align-items: center;
     display: inline;
-    justify-content: center;
     padding: 10px;
     background-color: rgba(245, 245, 245, 0.178);
     border: 1px solid lightskyblue;
     border-radius: 10px;
-    box-shadow: 0px 2px 8px black;
     margin-bottom: 20px;
     width: 90%;
     height: 300px;
     color: white;
     text-shadow: 2px 2px 4px black;
+    box-shadow: 0px 2px 8px lightskyblue;
 }
 #product-list img{
     margin: 0% auto;
+    display: flex;
     width: 150px;
     height: 150px;
     margin-bottom: 10px;
@@ -185,6 +186,7 @@ summary:hover{
 }
 #product-list span{
   margin: 0% auto;
+  display: flex;
   font-size: 18px;
   color: yellow;
   text-shadow: 2px 2px 4px darkblue;
@@ -194,7 +196,10 @@ summary:hover{
 
 #product-list input{
   margin: 0% auto;
-  width: 40%;
+  display: flex;
+  position: relative;
+  left: 30%;
+  width: 30%;
   padding: 2px;
   text-align: center;
   border-radius: 6px;
@@ -208,7 +213,10 @@ summary:hover{
 }
 #product-list select{
   margin: 0% auto;
-  width: 80px;
+  display: flex;
+  position: relative;
+  left: 25%;
+  width: 40%;
   padding: 4px;
   border-radius: 10px;
   background-color: rgb(235, 235, 235);
@@ -224,13 +232,18 @@ summary:hover{
     border: none;
     padding: 10px 10px;
     border-radius: 10px;
-    background-color: blue;
+    background-color: green;
+    border: 1px solid lightskyblue;
     color: white;
+    text-shadow: 2px 2px 4px gold;
     cursor: pointer;
+    box-shadow: 0px 2px 6px darkgray;
+    opacity: 90%;
 }
 #product-list button:hover{
     transform: scale(1.10);
     transition: 1s;
+    opacity: 100%;
 }
 
 
