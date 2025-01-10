@@ -78,7 +78,19 @@ function updateCartDisplay() {
   
   cartItems.forEach(item => {
     const li = document.createElement("li");
-    li.textContent = `${item.name} - Size: ${item.size} - $${(item.price / 100).toFixed(2)} x ${item.quantity}`;
+    
+    // Create and append the product image in the cart
+    const img = document.createElement("img");
+    img.src = item.image; // Image source path
+    img.alt = item.name; // Alt text for the image
+    img.style.width = "50px"; // Set a fixed width for the cart image (you can adjust it)
+    img.style.height = "50px"; // Set a fixed height for the cart image (you can adjust it)
+    li.appendChild(img);
+
+    // Add item info (name, size, price, quantity)
+    const productInfo = document.createElement("span");
+    productInfo.textContent = `${item.name} - Size: ${item.size} - $${(item.price / 100).toFixed(2)} x ${item.quantity}`;
+    li.appendChild(productInfo);
 
     // Create input field to change quantity
     const quantityInput = document.createElement("input");
