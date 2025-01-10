@@ -13,27 +13,48 @@ body {
 }
 
 h1 {
+    margin: 0% auto;
+    background-color: rgba(0, 0, 0, 0.322);
+    padding: 5px;
+    border-radius: 100%;
+    border: 6px solid rgba(245, 245, 245, 0.151);
     font-size: 35px;
     text-align: center;
     margin-bottom: 15px;
     color: white;
     text-shadow: 2px 2px 4px gold;
+    box-shadow: 0px 2px 8px black;
 }
 summary{
     margin: 0% auto;
-    width: 60px;
+    width: 75px;
+    height: auto;
+    position: fixed;
+    top: 80px;
+    left: 15px;
     font-size: 25px;
-    background-color: rgba(245, 245, 245, 0.075);
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid rgba(153, 205, 50, 0.774);
     list-style-type: none;
-    color: wheat;
     cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.185);
+    border: 1px solid yellowgreen;
+    box-shadow: 0px 2px 6px rgba(135, 206, 250, 0.445);
+    color: yellow;
+    text-shadow: 2px 2px 4px darkblue;
+    opacity: 70%;
+}
+summary i{
+    cursor: pointer;
+    
+    
 }
 summary:hover{
     transform: scale(1.10);
     transition: 0.5s;
+    opacity: 90%;
+    color: white;
+    text-shadow: 0px 0px 4px gold;
 }
 #card-element{
     margin: 0% auto;
@@ -200,11 +221,449 @@ summary:hover{
     }
    
 
+    .navigation{
+        margin: 0% auto;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        overflow-x: scroll;
+        border: none;
+        background: transparent;
+      }
+      .navigation::-webkit-scrollbar{
+        width: 0%;
+      }
+      .navigation::-webkit-scrollbar-track {
+        box-shadow: 0px 2px 6px rgba(162, 219, 48, 0.897);
+        border-radius: 10px;
+      }   
+      .navigation::-webkit-scrollbar-thumb{
+        border: 1px solid rgba(255, 217, 0, 0.856);
+        border-radius: 10px;
+        background: rgba(0, 0, 139, 0.562); 
+        cursor: grab; 
+      }
+      .navigation::-webkit-scrollbar-thumb:hover {
+        background: green;
+        cursor: grab;
+      }
+      .navigation::-webkit-scrollbar-thumb:active{
+        cursor: grabbing;
+      }
+      .navigation .mlb{
+        margin: 5px;
+        padding: 50px;
+        border: 1px solid rgba(255, 217, 0, 0.863);
+        box-shadow: 0px 3px 10px black;
+        border-radius: 10px;
+        background-image:url(AirforceWhitePi4.png);
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+      }
+      .navigation .mlb:hover{
+        box-shadow: 2px 2px 10px lightgreen;
+        background-color: rgba(255, 217, 0, 0.349);  
+        transform: scale(1.10);
+        transition: 0.5s; 
+      }
+      .navigation .mlb ion-icon{
+        color: transparent;
+      }
+      .navigation .nba{
+        margin: 5px;
+        padding: 50px;
+        border: 2px solid rgba(255, 217, 0, 0.856);
+        box-shadow: 0px 3px 10px black;
+        border-radius: 10px;
+        background-image: url(MonkeyDesignGif.gif);
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+      }
+      .navigation .nba:hover{
+        color: transparent;
+        transform: scale(1.10);
+        transition: 0.5s;
+      }
+      .navigation .nba ion-icon{
+        color: transparent;
+      }
+      .navigation .L-Accesories-Nav{
+        margin: 5px;
+        padding: 50px;
+        border: 2px solid rgba(255, 217, 0, 0.863);
+        box-shadow: 0px 3px 10px black;
+        border-radius: 10px;
+        background-image:url();
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+      }
+      .navigation .L-Accesories-Nav:hover{
+        box-shadow: 2px 2px 10px lightgreen;
+        background-color: rgba(255, 217, 0, 0.349);  
+        transform: scale(1.10);
+        transition: 0.5s; 
+      }
+      .navigation .L-Accesories-Nav ion-icon{
+        color: transparent;
+      }
+      .navigation .L-Clothing-Nav{
+        margin: 5px;
+        padding: 50px;
+        border: 2px solid rgba(255, 217, 0, 0.856);
+        box-shadow: 0px 3px 10px black;
+        border-radius: 10px;
+        background-image:url(Razerpic2.jpg);
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+      }
+      .navigation .L-Clothing-Nav:hover{
+        box-shadow: 2px 2px 10px lightgreen;
+        background-color: rgba(255, 217, 0, 0.349);  
+        transform: scale(1.10);
+        transition: 0.5s; 
+      }
+      .navigation .L-Clothing-Nav ion-icon{
+        color: transparent;
+      }
+      .navigation .L-Shoes-Nav{
+        margin: 5px;
+        padding: 50px;
+        border: 2px solid rgba(255, 217, 0, 0.863);
+        box-shadow: 0px 3px 10px black;
+        border-radius: 10px;
+        background-image:url(razer3.jpg);
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+      }
+      .navigation .L-Shoes-Nav:hover{
+        box-shadow: 2px 2px 10px lightgreen;
+        background-color: rgba(255, 217, 0, 0.349);  
+        transform: scale(1.10);
+        transition: 0.5s; 
+      }
+      .navigation .L-Shoes-Nav ion-icon{
+        color: transparent;
+      }
+      .navigation .L-Sneakers-Nav{
+        margin: 5px;
+        padding: 50px;
+        border: 2px solid rgba(255, 217, 0, 0.849);
+        box-shadow: 0px 3px 10px black;
+        border-radius: 10px;
+        background-image:url(Razerpic5.webp);
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+      }
+      .navigation .L-Sneakers-Nav:hover{
+        box-shadow: 2px 2px 10px lightgreen;
+        background-color: rgba(255, 217, 0, 0.349);  
+        transform: scale(1.10);
+        transition: 0.5s; 
+      }
+      .navigation .L-Sneakers-Nav ion-icon{
+        color: transparent;
+      }
+      .navigation .L-Kitchen-Nav{
+        margin: 5px;
+        padding: 50px;
+        border: 2px solid rgba(255, 217, 0, 0.856);
+        box-shadow: 0px 3px 10px black;
+        border-radius: 10px;
+        background-image:url(razer6.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+      .navigation .L-Kitchen-Nav:hover{
+        box-shadow: 2px 2px 10px lightgreen;
+        background-color: rgba(255, 217, 0, 0.349);  
+        transform: scale(1.10);
+        transition: 0.5s; 
+      }
+      .navigation .L-Kitchen-Nav ion-icon{
+        color: transparent;
+      }
+      .navigation .L-RealState-Nav{
+        margin: 5px;
+        padding: 50px;
+        border: 2px solid rgba(255, 217, 0, 0.856);
+        box-shadow: 0px 3px 10px black;
+        border-radius: 10px;
+        background-image: url(razerpic00.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+      .navigation .L-RealState-Nav:hover{
+        box-shadow: 2px 2px 10px lightgreen;
+        background-color: rgba(255, 217, 0, 0.349);  
+        transform: scale(1.10);
+        transition: 0.5s; 
+      }
+      .navigation .L-RealState-Nav ion-icon{
+        color: transparent;
+      }
+      .navigation .L-Glasses-Nav{
+        margin: 5px;
+        padding: 50px;
+        border: 2px solid rgba(255, 217, 0, 0.856);
+        box-shadow: 0px 3px 10px black;
+        border-radius: 10px;
+        background-image:url(razerpic1.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+      .navigation .L-Glasses-Nav:hover{
+        box-shadow: 2px 2px 10px lightgreen;
+        background-color: rgba(255, 217, 0, 0.349);  
+        transform: scale(1.10);
+        transition: 0.5s; 
+      }
+      .navigation .L-Glasses-Nav ion-icon{
+        color: transparent;
+      }
+      .navigation .L-Watches-Nav{
+        margin: 5px;
+        padding: 50px;
+        border: 2px solid rgba(255, 217, 0, 0.856);
+        box-shadow: 0px 3px 10px black;
+        border-radius: 10px;
+        background-image:url(AirforceWhitePi2.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+      .navigation .L-Watches-Nav:hover{
+        box-shadow: 2px 2px 10px lightgreen;
+        background-color: rgba(255, 217, 0, 0.349);  
+        transform: scale(1.10);
+        transition: 0.5s; 
+      }
+      .navigation .L-Watches-Nav ion-icon{
+        color: transparent;
+      }
+      .navigation .L-Men-Fashion-Nav{
+        margin: 5px;
+        padding: 50px;
+        border: 2px solid rgba(255, 217, 0, 0.856);
+        box-shadow: 0px 3px 10px black;
+        border-radius: 10px;
+        background-image:url(AirforceWhitePi3.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+      .navigation .L-Men-Fashion-Nav:hover{
+        box-shadow: 2px 2px 10px lightgreen;
+        background-color: rgba(255, 217, 0, 0.349);  
+        transform: scale(1.10);
+        transition: 0.5s; 
+      }
+      .navigation .L-Men-Fashion-Nav ion-icon{
+        color: transparent;
+      }
+
+
+      .nav-info{
+        margin: 0% auto;
+        align-items: center;
+        text-align:  center;
+        margin-bottom: 15px;
+        opacity: 90%;
+        transition: 1s ease-in;
+        }
+        .nav-info a{
+        text-decoration: none;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: rgba(245, 222, 179, 0.842);
+        text-shadow: 0px 1px 2px whitesmoke;
+        letter-spacing: 1px;
+        border: 1px solid blue;
+        box-shadow: 0px 2px 0px rgba(135, 206, 250, 0.815);
+        padding: 5px 10px;
+        margin: 5px;
+        border-radius: 10px;
+        }
+        
+        body.lightStore .nav-info a:hover{
+        border-bottom: 8px solid palevioletred;
+        transition: 0.5s;
+        
+        }
+        
+        
+        .nav-info a:hover{
+        border-bottom: 8px solid palevioletred;
+        transition: 0.5s;
+        
+        }
+        .nav-info{
+            margin: 0% auto;
+            align-items: center;
+            text-align:  center;
+            margin-bottom: 15px;
+            opacity: 90%;
+            transition: 1s ease-in;
+            }
+            .nav-info a{
+            text-decoration: none;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rgba(245, 222, 179, 0.842);
+            text-shadow: 0px 1px 2px whitesmoke;
+            letter-spacing: 1px;
+            border: 1px solid blue;
+            box-shadow: 0px 2px 0px rgba(135, 206, 250, 0.815);
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 10px;
+            }
+            
+            body.lightStore .nav-info a:hover{
+            border-bottom: 8px solid palevioletred;
+            transition: 0.5s;
+            
+            }
+            
+            
+            .nav-info a:hover{
+            border-bottom: 8px solid palevioletred;
+            transition: 0.5s;
+            
+            }
+            body.lightStore .nav-info a{
+            color: white;
+            text-shadow: 2px 2px 4px rgba(255, 217, 0, 0.842);
+            border-top: 2px solid rgba(153, 205, 50, 0.774);
+            border-bottom: 1px solid crimson;
+            background-color: rgba(0, 0, 0, 0.623);
+            box-shadow: 0px 1px 0px darkblue;
+            transition: 1s ease-out;
+            }
+
+      .container{
+        margin: 0px;
+        padding: 0px;
+        display: none;
+        height: 0px;
+        width: 0px;
+      }
+      
+      @media (min-width: 768px) {
+        .nav-info{
+          position: absolute;
+          left: 5px;
+          top: 155px;
+          gap: 10px;
+          opacity: 90%;
+          
+        }
+        .nav-info a{
+          margin: 5px;
+        }
+        .container{
+          margin: 0% auto;
+          display: block;
+          height: 350px;
+          margin-top: 30px;
+          margin-bottom: 50px;
+          min-width: 300px; 
+        }
+      .Box{
+        margin: 0% auto;
+        position: relative;
+        width: 300px;
+        height: 300px;
+        animation: animate 15s linear infinite;
+      }
+      @keyframes animate {
+        0% {
+            rotate: 0deg;
+        }
+        100% {
+            rotate: 360deg;
+        }
+      }
+      .container:hover .Box{
+        animation-play-state: paused;
+      }
+      .img{
+        position: relative;
+        left: -50%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      .img .imgBox{
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 217, 0, 0.801);
+        transform: rotate(calc(360deg/8 * var(--i)));
+        transform-origin: 190px;
+        box-shadow: 0px 2px 20px blue;
+      }
+      body.light .img .imgBox{
+        box-shadow: 0px 2px 15px #ff105e;
+        border: 2px solid rgba(255, 217, 0, 0.863);
+      }
+      
+      .img .imgBox img{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        transform: rotate(calc(-360deg/8 * var(--i)));
+        animation: animateimgBox 15s linear infinite;
+      }
+      
+      .container:hover .img .imgBox img{
+        animation-play-state: paused;
+      }
+      
+      @keyframes animateimgBox {
+        0% {
+            rotate: 0deg;
+        }
+        100% {
+            rotate: -360deg;
+        } 
+      }
+    }
+    
   
 
 
 
 @media (min-width: 768px){
+    h1{
+        width: 600px;
+    }
     #card-element{
         width: 400px;
     }
@@ -227,3 +686,173 @@ summary:hover{
           
       }
 }
+
+@media (min-width: 768px) {
+    .nav-info{
+        position: absolute;
+        left: 5px;
+        top: 155px;
+        gap: 10px;
+        opacity: 90%;
+        
+      }
+      .nav-info a{
+        margin: 5px;
+      }
+    .container{
+      margin: 0% auto;
+      display: block;
+      height: 350px;
+      margin-top: 30px;
+      margin-bottom: 50px;
+      min-width: 300px; 
+    }
+  .Box{
+    margin: 0% auto;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    animation: animate 15s linear infinite;
+  }
+  @keyframes animate {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+  }
+  .container:hover .Box{
+    animation-play-state: paused;
+  }
+  .img{
+    position: relative;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .img .imgBox{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 217, 0, 0.801);
+    transform: rotate(calc(360deg/8 * var(--i)));
+    transform-origin: 190px;
+    box-shadow: 0px 2px 20px blue;
+  }
+  body.light .img .imgBox{
+    box-shadow: 0px 2px 15px #ff105e;
+    border: 2px solid rgba(255, 217, 0, 0.863);
+  }
+  
+  .img .imgBox img{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transform: rotate(calc(-360deg/8 * var(--i)));
+    animation: animateimgBox 15s linear infinite;
+  }
+  
+  .container:hover .img .imgBox img{
+    animation-play-state: paused;
+  }
+  
+  @keyframes animateimgBox {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: -360deg;
+    } 
+  }
+  h5{
+  margin: 0% auto;
+  position: relative;
+  width: 160px;
+  bottom: -170px;
+  left: 0px;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px lightcoral;
+  background-color: rgba(0, 0, 139, 0.603);
+  box-shadow: 0px 2px 12px lightskyblue;
+  padding: 10px 20px;
+  border-radius: 15px;
+  
+  }
+  h5 ion-icon{
+  color: rgba(255, 217, 0, 0.596);
+  font-weight: bold;
+  border-bottom: 2px solid gold;
+  box-shadow: 0px 2px 10px #ff1060e8;
+  border-radius: 50px;
+  background-image: url(lollipop_3GIF.gif);
+  background-size: cover;
+  background-position: center;
+  }
+  body.lightStore h5 ion-icon{
+  box-shadow: 0px 2px 15px blue;
+  }
+  #cart-items img{
+  width:  50px;
+  height: 50px;
+  padding: 2px;
+  border: 1px solid lightskyblue;
+  box-shadow: 0px 2px 6px white;
+  border-radius: 8px;
+  }
+  #cart-items{
+  font-size: 18px;
+  }
+  #cart-items input{
+  width: 100px;
+  padding: 5px;
+  }
+  
+  .image-container {
+    margin: 0% auto;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-width: 500px;
+   
+  }
+  .blink-image {
+    min-width: 100px;
+    min-height: 100px;
+    object-fit: cover;
+    opacity: 0; /* Initially hide the images */
+    animation: blink 10s infinite;
+  }
+  .image-container img{
+    padding: 10px;
+    border: 1px solid lightskyblue;
+    border-radius: 20px;
+    box-shadow: 0px 2px 10px lightskyblue;
+    margin-inline: 15px;
+   
+  }
+  body.lightStore .image-container img{
+    border: 1px solid yellowgreen;
+    box-shadow: 0px 2px 6px gold;
+  }
+  .blink-image:nth-child(7) {
+    display: none;
+  }
+  .blink-image:nth-child(8) {
+    display: none;
+  }
+  
+  
+  }
