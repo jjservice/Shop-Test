@@ -68,9 +68,9 @@ summary:hover{
 }
 #product-list{
     margin: 0% auto;
-    width: 80%;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 10px;
     justify-items: center;
@@ -162,5 +162,9 @@ summary:hover{
 @media (min-width: 768px){
     #card-element{
         width: 400px;
+    }
+    #product-list{
+        grid-template-columns: repeat(4, 1fr);
+        
     }
 }
