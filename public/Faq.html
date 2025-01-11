@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Page</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background: linear-gradient(to right,black,darkblue,maroon,black);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px gold;
+        }
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(245, 245, 245, 0.288);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item h3 {
+            background-color: darkblue;
+            color: wheat;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0;
+        }
+        .faq-item p {
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.623);
+            color: white;
+            border-radius: 5px;
+            margin: 0;
+            display: none;
+        }
+        .faq-item.active p {
+            display: block;
+        }
+        .faq-item h3:hover {
+            background-color: blue;
+        }
+        h4{
+            text-align: center;
+            color: rgba(128, 128, 128, 0.747);
+        }
+        .Return-btn{
+            margin: 0% auto;
+            display: flex;
+            border: none;
+            background-color: blue;
+            border: 1px solid rgba(135, 206, 250, 0.445);
+            box-shadow: 0px 2px 6px rgba(128, 128, 128, 0.616);
+            color: wheat;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .Return-btn:hover{
+            background-color: green;
+            transform: scale(1.05);
+            transition: 0.5s;
+        }
+        
+        footer{
+    margin: 0% auto;
+    flex-direction: column;
+    bottom: 0%;
+    left: 0;
+    position: fixed;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    padding: 5px;
+    color: rgb(48, 47, 47);
+  
+     }
+     footer p{
+      width: 200px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.062);
+      padding: 5px;
+      border-radius: 20px;
+     }
+     footer ion-icon{
+      color: rgba(255, 217, 0, 0.411);
+     }
+  
+     .homebtn{
+      margin: 0% auto;
+      position: fixed;
+      left: 5px;
+      bottom: 0px;
+      border-bottom: 1px solid gold;
+      box-shadow: 0px 2px 6px blue;
+      background-image: url(MusicGig.gif);
+      background-position: center;
+      background-size: 100%;
+      border-radius: 7px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      padding: 2px 0px;
+      opacity: 80%;
+      margin-bottom: 5px;
+      cursor: pointer;
+    
+    }
+    .homebtn ion-icon{
+      margin: 0% auto;
+      color: rgba(255, 217, 0, 0.568);
+      justify-content: center;
+      font-size: 25px;
+      display: flex;
+      align-items: center;
+      
+    }
+    .homebtn ion-icon:hover{
+      color: gold;
+    }
+    .homebtn:hover{
+      color: gold;
+      transition: color 0.5s ease;
+      box-shadow: 2px 2px 20px gold;
+      transform: scale(1.10);
+      transition: 0.5s;
+      cursor: pointer;
+    
+    }
+
+    </style>
+</head>
+<body>
+
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq-container">
+        <div class="faq-item">
+            <h3>What is your return policy?</h3>
+            <p>We offer a 30-day return policy for all products. You can return items within 30 days of purchase for a full refund or exchange.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How do I track my order?</h3>
+            <p>Once your order has shipped, you will receive a tracking number via email. You can use this number to track your order on our website or through the carrier's tracking system.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Do you ship internationally?</h3>
+            <p>Yes, we offer international shipping to most countries. Shipping costs and delivery times vary depending on the destination.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How can I contact customer service?</h3>
+            <p>You can contact our customer service team through our contact page by emailing <a href="mailto:lollipop.club@outlook.com" style="color: blue; text-shadow: 1px 1px 1px whitesmoke; font-weight: bold;">lollipop.club@outlook.com</a>. We strive to respond within 24 hours.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What payment methods do you accept?</h3>
+            <p>We accept major credit cards, debit cards, and Payments are securely processed through our website.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="homebtn"><a href="javascript:history.back()"><ion-icon name="arrow-back-sharp"></ion-icon></a></div>
+        <p>&copy;<span id="currentYear"></span>JJPoweredIT<ion-icon name="bonfire-sharp"></ion-icon></p>
+      </footer>
+    
+      <script>
+        // Get the current year
+        const currentYear = new Date().getFullYear();
+        
+        // Find the element with id "currentYear" and set its content to the current year
+        document.getElementById("currentYear").textContent = currentYear;
+      </script>
+
+    <script>
+        // Toggle FAQ answers
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            item.querySelector('h3').addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

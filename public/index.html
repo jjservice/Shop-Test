@@ -34,7 +34,7 @@
 
    <!-- Navigation Info -->
    <div class="nav-info">
-    <a href="https://jjservice.github.io/L2/1.html"><ion-icon name="home"></ion-icon></a>
+    <a href="javascript:history.back()"><ion-icon name="home"></ion-icon></a>
     <a href="About.html">About</a>
     <a href="ContactForm.html">Contact</a>
     <a href="Faq.html">FAQ</a>
@@ -131,10 +131,21 @@
       <img id="modal-image" src="" alt="Product Image">
     </div>
   </div>
-  
-  
- 
 
+
+  <footer>
+    <p>&copy;<span id="currentYear"></span>JJPoweredIT<ion-icon name="bonfire-sharp"></ion-icon></p>
+  </footer>
+
+  <script>
+    // Get the current year
+    const currentYear = new Date().getFullYear();
+    
+    // Find the element with id "currentYear" and set its content to the current year
+    document.getElementById("currentYear").textContent = currentYear;
+  </script>
+ 
+  
   <script src="script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
